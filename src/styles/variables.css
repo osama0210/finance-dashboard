@@ -1,0 +1,22 @@
+:root {
+    /*text color*/
+    --primary-text-color: #1A1A1A;
+    --secondary-text-color: #9E9E9E;
+    --active-text-color: #1573FE;
+    --success-color: #28C76F;
+    --error-color: #EA5455;
+    --warning-color: #FF9F43;
+
+    /* Font Sizes */
+    --font-small: 12px;
+    --font-medium: 14px;
+    --font-large: 16px;
+    --font-xl: 20px;
+    --font-xxl: 24px;
+
+    /* Spacing */
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+    --spacing-xl: 32px;
+}
