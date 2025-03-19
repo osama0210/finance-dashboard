@@ -1,2 +1,88 @@
 @import "variables.css";
+@import "header.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--font-medium);
+    color: var(--primary-text-color);
+    background-color: #F5F5F5;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-text-color);
+    font-weight: 700;
+}
+
+h1 {
+    font-size: var(--font-xxl);
+}
+
+h2 {
+    font-size: var(--font-xl);
+}
+
+h3 {
+    font-size: var(--font-large);
+}
+
+h4 {
+    font-size: var(--font-medium);
+}
+
+h5, h6 {
+    font-size: var(--font-small);
+}
+
+p {
+    color: var(--secondary-text-color);
+    font-size: var(--font-medium);
+}
+
+button {
+    font-family: inherit;
+    font-size: var(--font-medium);
+    padding: var(--spacing-small) var(--spacing-medium);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.primary {
+    background-color: var(--active-text-color);
+    color: white;
+}
+
+button.success {
+    background-color: var(--success-color);
+    color: white;
+}
+
+button.error {
+    background-color: var(--error-color);
+    color: white;
+}
+
+button.warning {
+    background-color: var(--warning-color);
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-medium);
+}
 

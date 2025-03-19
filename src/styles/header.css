@@ -1,0 +1,57 @@
+.header {
+    height: var(--navbar-height);
+    background: #ffffff;
+    box-shadow: var(--navbar-box-shadow);
+    border-bottom: var(--navbar-border);
+}
+
+.nav {
+    height: var(--navbar-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.logo-search-container {
+    display: flex;
+    align-items: center;
+    gap: var(--logo-search-gap);
+    padding: var(--logo-search-padding);
+    flex-grow: 1;
+}
+
+.logo {
+    font-size: var(--logo-size);
+}
+
+.logo-letter {
+    color: var(--active-text-color);
+}
+
+.search-bar-container {
+    flex-grow: 1;
+    display: flex;
+}
+
+.logo-search-container input {
+    border: 1px solid var(--input-border-color);
+    border-radius: var(--input-border-radius);
+    padding: var(--input-padding);
+    width: 50%;
+    min-width: 150px;
+    max-width: 400px;
+    background-image: url("../assets/icons/search.svg");
+    background-repeat: no-repeat;
+    background-position: var(--input-bg-position);
+    background-size: var(--input-bg-size);
+}
+
+.like-button-container .like-btn.primary {
+    border-radius: var(--favourite-btn-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--like-btn-size);
+    height: var(--like-btn-size);
+}
