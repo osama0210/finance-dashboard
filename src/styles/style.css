@@ -8,10 +8,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
     font-size: var(--font-medium);
     color: var(--primary-text-color);
     background-color: #F5F5F5;

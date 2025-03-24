@@ -6,7 +6,7 @@ const Header = () => {
         <header className="header">
             <nav className="nav">
                 <div className="logo-search-container">
-                    <Link to={'/Home'}>
+                    <Link to={'/'}>
                         <h1 className="logo">
                             Flex<span className="logo-letter">Bit</span>
                         </h1>

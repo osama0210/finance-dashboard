@@ -3,7 +3,7 @@ import CrircleChart from './components/CircleChartCard.jsx'
 import Favorite from './components/Favorite.jsx'
 
 import {Routes, Route} from "react-router-dom";
-import {useState, useEffect, useRef} from "react";
+// import {useState, useEffect, useRef} from "react";
 
 // const RenderCoins = () => {
 //     fetch("https://api.coincap.io/v2/assets")
@@ -25,9 +25,7 @@ const App = () => {
         <>
             <Header/>
             <Routes>
-                <Route path={"/Home"} element={<>
-                    <CrircleChart/>
-                </>}/>
+                <Route path={"/"} element={<CrircleChart/>}></Route>
                 <Route path={"/Favorite"} element={<Favorite/>}></Route>
             </Routes>
 
