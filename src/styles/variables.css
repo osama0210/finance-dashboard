@@ -1,4 +1,9 @@
 :root {
+    /* Colors */
+    --primary-background-color: #ffffff;
+    --secondary-background-color: #f4f4f4;
+    --white: #ffffff;
+
     /* Text Colors */
     --primary-text-color: #1A1A1A;
     --secondary-text-color: #9E9E9E;
@@ -13,13 +18,22 @@
     --font-large: 16px;
     --font-xl: 20px;
     --font-xxl: 24px;
+
+    /* Font Weights */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    /* Sizing */
     --logo-size: 1.8rem;
+    --like-btn-size: 50px;
 
     /* Spacing */
     --spacing-small: 8px;
     --spacing-medium: 16px;
     --spacing-large: 24px;
     --spacing-xl: 32px;
+    --spacing-xxl: 3rem;
 
     /* Navbar */
     --navbar-height: 90px;
@@ -27,21 +41,26 @@
     --navbar-border: 1px solid rgba(0, 0, 0, 0.1);
 
     /* Buttons */
-    --like-btn-size: 50px;
     --favourite-btn-radius: 50%;
 
     /* Borders */
     --input-border-color: #9E9E9E;
     --input-border-radius: 6px;
+    --card-border-radius: 1rem;
 
-    /* Padding */
+    /* Input */
     --input-padding: 10px;
+    --input-bg-size: 24px;
+    --input-bg-position: calc(100% - 10px) center;
 
-    /* Gaps & Spacing */
+    /* Layout */
     --logo-search-gap: 10%;
     --logo-search-padding: 0.5rem;
 
-    /* Input Background */
-    --input-bg-size: 24px;
-    --input-bg-position: calc(100% - 10px) center;
+    /* Shadows */
+    --card-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    /* Transitions */
+    --transition-speed: 0.3s;
+    --transition-timing: ease;
 }
