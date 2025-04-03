@@ -2,6 +2,7 @@
 @import "header.css";
 @import "card.css";
 @import "coins-overview.css";
+@import "sub-menu.css";
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
@@ -63,33 +64,22 @@ button.primary {
     color: white;
 }
 
-button.success {
-    background-color: var(--success-color);
-    color: white;
-}
-
-button.error {
-    background-color: var(--error-color);
-    color: white;
-}
-
-button.warning {
-    background-color: var(--warning-color);
-    color: white;
-}
-
 button:hover {
-    opacity: 0.9;
+    opacity: 1;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: var(--spacing-medium);
-}
+/*.container {*/
+/*    max-width: 1200px;*/
+/*    margin: 0 auto;*/
+/*    padding: var(--spacing-medium);*/
+/*}*/
 
-.chart-container{
-    width: 100%;
-    display: flex;
+/*.chart-container{*/
+/*    width: 100%;*/
+/*    display: flex;*/
+/*}*/
+
+.content{
+    margin: 3rem;
 }
 

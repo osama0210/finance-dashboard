@@ -1,0 +1,20 @@
+.sub-menu{
+    display: flex;
+    gap: 1rem;
+    width: 20%;
+    margin: 2rem 0;
+}
+
+.sub-menu-btn{
+    background: none;
+    border: 2px solid rgba(17, 17, 26, 0.1);
+    color: var(--primary-text-color);
+    border-radius: 0.5rem;
+    transition: border 0.3s ease, color 0.3s ease;
+}
+
+.sub-menu-btn:focus {
+    border: 2px solid var(--active-text-color);
+    color: var(--active-text-color);
+
+}
