@@ -1,11 +1,25 @@
+import {useState, useEffect} from "react";
+
 const coinsOverview = () => {
+    const url = "https://api.coincap.io/v2/assets";
+    const [coins, setCoin] = useState(null);
+    useEffect(() => {
+        fetch(url)
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+                console.log(data);
+                setCoin(data.data);
+            })
+    }, [])
     return (
         <div className="table-container">
             <div className="coins-overview-container">
                 <table className="coins-overview-table">
                     <thead>
                     <tr className="table-header">
-                        <th>Crypto Coin</th>
+                        <th></th>
                         <th></th>
                         <th>Price</th>
                         <th>Change (24h)</th>
