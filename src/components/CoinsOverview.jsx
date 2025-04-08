@@ -1,72 +1,61 @@
 import {useState, useEffect} from "react";
 
 const coinsOverview = () => {
-    const url = "https://api.coincap.io/v2/assets";
-    const [coins, setCoin] = useState(null);
+
+
+    // fetch api
+    const url = "https://data-api.coindesk.com/asset/v1/top/list?page=1&page_size=100";
+    const [coins, setCoins] = useState(null);
     useEffect(() => {
         fetch(url)
             .then(res => {
                 return res.json();
             })
             .then(data => {
-                console.log(data);
-                setCoin(data.data);
+                console.log(data.Data.LIST);
+                setCoins(data.Data.LIST);
             })
     }, [])
+
+
+if(!coins){
     return (
-        <div className="table-container">
-            <div className="coins-overview-container">
-                <table className="coins-overview-table">
-                    <thead>
-                    <tr className="table-header">
-                        <th></th>
-                        <th></th>
-                        <th>Price</th>
-                        <th>Change (24h)</th>
-                        <th>Favorite</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr className="table-body">
-                        <td>Bitcoin</td>
-                        <td></td>
-                        <td>$45,000</td>
-                        <td>232</td>
-                        <td>like</td>
-                    </tr>
+        <div>
+            loading...
+        </div>
+    )
+}
 
-                    <tr className="table-body">
-                        <td>Bitcoin</td>
-                        <td></td>
-                        <td>$45,000</td>
-                        <td>232</td>
-                        <td>like</td>
-                    </tr>
+        return (
+            <div className="table-container">
+                <div className="coins-overview-container">
+                    <table className="coins-overview-table">
+                        <thead>
+                        <tr className="table-header">
+                            <th>Crypto coin</th>
+                            <th></th>
+                            <th>Price</th>
+                            <th>Change (24h)</th>
+                            <th>Favorite</th>
+                        </tr>
+                        </thead>
+                        <tbody>
 
-                    <tr className="table-body">
-                        <td>Bitcoin</td>
-                        <td></td>
-                        <td>$45,000</td>
-                        <td>232</td>
-                        <td>like</td>
-                    </tr>
-
-                    <tr className="table-body">
-                        <td>Bitcoin</td>
-                        <td></td>
-                        <td>$45,000</td>
-                        <td>232</td>
-                        <td>like</td>
-                    </tr>
-
-                    <tr className="table-body">
-                        <td>Bitcoin</td>
-                        <td></td>
-                        <td>$45,000</td>
-                        <td>232</td>
-                        <td>like</td>
-                    </tr>
+                    {
+                        coins.map(coin => {
+                            return (
+                                <tr key={coin.ID} className="table-body">
+                                    <td>{coin.NAME}</td>
+                                    <td></td>
+                                    <td>$45,000</td>
+                                    <td>232</td>
+                                    <td>like</td>
+                                </tr>
+                            )
+                        })
+                    }
                     </tbody>
+
                 </table>
             </div>
         </div>
