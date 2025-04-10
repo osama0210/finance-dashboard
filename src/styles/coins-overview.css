@@ -1,12 +1,9 @@
 .coins-overview-container{
-    height: 100vh;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .coins-overview-table{
-    height: ;
     width: 80%;
     z-index: 2;
     border-radius: 12px 12px 0 0;
@@ -31,4 +28,15 @@ thead, th{
 }
 .coins-overview-table tr:hover {
     background: var(--secondary-background-color);
+}
+
+.coin-name-img{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.coin-img{
+    width: 35px;
+    border-radius: 50%;
 }

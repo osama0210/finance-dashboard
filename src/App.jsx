@@ -7,19 +7,6 @@ import SupMenu from './components/SupMenu.jsx'
 import {Routes, Route} from "react-router-dom";
 // import {useState, useEffect, useRef} from "react";
 
-// const RenderCoins = () => {
-//     fetch("https://api.coincap.io/v2/assets")
-//         .then(response => {
-//             if (response.ok) {
-//                 return response.json();
-//             }
-//         })
-//         .then(data => {
-//             console.log(data)
-//         })
-//
-// }
-
 
 const App = () => {
 
