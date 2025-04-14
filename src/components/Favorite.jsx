@@ -1,8 +1,11 @@
+
 const Favorite = () => {
     return (
         <>
             <div>
-                <h1>oddifhjoq</h1>
+
+                <div><FavoriteList fav={favourite}></FavoriteList></div>
+
             </div>
         </>
     )

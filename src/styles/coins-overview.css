@@ -40,3 +40,7 @@ thead, th{
     width: 35px;
     border-radius: 50%;
 }
+
+.active{
+    fill: rgb(246, 184, 126);
+}
