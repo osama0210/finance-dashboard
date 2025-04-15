@@ -1,14 +1,11 @@
+import FavoriteList from "./FavoriteList.jsx";
 
-const Favorite = () => {
+const Favorite = ({ favourite }) => {
     return (
-        <>
-            <div>
-
-                <div><FavoriteList fav={favourite}></FavoriteList></div>
-
-            </div>
-        </>
-    )
-}
+        <div>
+            <FavoriteList fav={favourite} />
+        </div>
+    );
+};
 
 export default Favorite;

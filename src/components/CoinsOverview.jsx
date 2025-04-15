@@ -1,11 +1,10 @@
 import {useState, useEffect} from "react";
 import LinkIcon from "../assets/icons/like.svg";
 
-const coinsOverview = () => {
+const coinsOverview = ({ favourite, setFavourite }) => {
     // Fetch api
     const url = "https://data-api.coindesk.com/asset/v1/top/list?page=1&page_size=100";
     const [coins, setCoins] = useState(null);
-    const [favourite, setFavourite] = useState([]);
 
     useEffect(() => {
         fetch(url)
@@ -64,7 +63,6 @@ const coinsOverview = () => {
                                 <td>
                                     <img onClick={() => addCoinFav(coin.NAME)} src={LinkIcon} alt="Black star icon"/>
                                 </td>
-
                             </tr>
                         )
 

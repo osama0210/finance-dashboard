@@ -1,17 +1,14 @@
 const FavoriteList = ({fav}) => {
     return (
         <div>
-            {
-                fav.map(favourite => {
-                    return (
-                        <span key={favourite}>
-                            dit is een fav coin: {favourite}
-                        </span>
-                    )
-                })
-            }
+            {fav.map((favourite, index) => (
+                <span key={index}>
+                    Dit is een fav coin: {favourite}
+                    <br/>
+                </span>
+            ))}
         </div>
-    )
-}
+    );
+};
 
 export default FavoriteList;

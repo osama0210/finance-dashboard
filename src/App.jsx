@@ -3,27 +3,31 @@ import CrircleChart from './components/CircleChartCard.jsx'
 import CoinsOverview from './components/CoinsOverview.jsx'
 import Favorite from './components/Favorite.jsx'
 import SupMenu from './components/SupMenu.jsx'
-
+import {useState} from "react";
 import {Routes, Route} from "react-router-dom";
-// import {useState, useEffect, useRef} from "react";
 
 
 const App = () => {
+    const [favourite, setFavourite] = useState([]);
 
     return (
         <>
             <Header/>
             <div className="content">
                 <SupMenu/>
+
                 <Routes>
-                    <Route path={"/"} element={<CrircleChart/>}></Route>
-                    <Route path={"/Statistics"} element={<CoinsOverview/>}></Route>
+                    <Route path="/" element={<CrircleChart />} />
+                    <Route
+                        path="/Statistics"
+                        element={<CoinsOverview favourite={favourite} setFavourite={setFavourite} />}
+                    />
+                    <Route
+                        path="/Favorite"
+                        element={<Favorite favourite={favourite} />}
+                    />
                 </Routes>
             </div>
-
-            <Routes>
-                <Route path={"/Favorite"} element={<Favorite/>}></Route>
-            </Routes>
         </>
     );
 };
