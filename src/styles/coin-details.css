@@ -1,0 +1,97 @@
+.coin-info-header {
+    width: 100%;
+    background-color: var(--primary-background-color);
+    box-shadow: var(--card-box-shadow);
+    padding: var(--spacing-xl) var(--spacing-xxl);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-large);
+    border-radius: 0;
+}
+
+.coin-logo {
+    width: var(--coin-logo-size, 120px);
+    height: var(--coin-logo-size, 120px);
+    border-radius: 50%;
+}
+
+.coin-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small);
+}
+
+.coin-name {
+    font-size: var(--font-xxxl);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-text-color);
+    margin: 0;
+}
+
+.coin-symbol {
+    background-color: var(--secondary-background-color);
+    padding: 6px 14px;
+    border-radius: var(--input-border-radius);
+    font-size: var(--font-medium);
+    color: var(--secondary-text-color);
+    width: fit-content;
+}
+
+.coin-price-row {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-medium);
+    margin-top: var(--spacing-small);
+}
+
+.coin-price {
+    font-size: var(--coin-price-font-size, 2.4rem);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-text-color);
+}
+
+.coin-change {
+    font-size: var(--font-medium);
+    font-weight: var(--font-weight-medium);
+}
+
+.coin-change.positive {
+    color: var(--success-color);
+}
+
+.coin-change.negative {
+    color: var(--error-color);
+}
+
+.coin-time {
+    font-size: var(--font-small);
+    color: var(--secondary-text-color);
+    margin-top: -0.8rem;
+}
+
+@media (max-width: 650px) {
+    .coin-info-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--spacing-large);
+        gap: var(--spacing-medium);
+    }
+
+    .coin-logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .coin-name {
+        font-size: var(--font-xxl);
+    }
+
+    .coin-price {
+        font-size: 1.8rem;
+    }
+
+    .coin-time {
+        font-size: var(--font-small);
+        margin-top: 0;
+    }
+}

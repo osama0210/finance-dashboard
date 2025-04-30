@@ -1,10 +1,30 @@
 .coins-overview-container{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    width: 100%;
 }
+
+.search-bar-container {
+    padding: 0 7px 15px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logo-search-container, .search-input {
+    border: 1px solid var(--input-border-color);
+    border-radius: var(--input-border-radius);
+    padding: var(--input-padding);
+    width: 50%;
+    min-width: 150px;
+    max-width: 400px;
+    background-image: url("../assets/icons/search.svg");
+    background-repeat: no-repeat;
+    background-position: var(--input-bg-position);
+    background-size: var(--input-bg-size);
+}
+
 .coins-overview-table{
-    width: 80%;
+    width: 100%;
     z-index: 2;
     border-radius: 12px 12px 0 0;
     overflow: hidden;
@@ -21,6 +41,10 @@ thead, th{
     background: var(--active-text-color);
     color: var(--tabel-text-color);
     text-transform: uppercase;
+}
+
+tbody tr{
+    cursor: pointer;
 }
 
 .coins-overview-table tbody tr:nth-child(odd) {

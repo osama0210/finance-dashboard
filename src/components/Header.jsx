@@ -5,15 +5,12 @@ const Header = () => {
     return (
         <header className="header">
             <nav className="nav">
-                <div className="logo-search-container">
+                <div className="logo-container">
                     <Link to={'/'}>
                         <h1 className="logo">
                             Flex<span className="logo-letter">Bit</span>
                         </h1>
                     </Link>
-                    <div className="search-bar-container">
-                        <input type="text" placeholder='Search by BitFlex'/>
-                    </div>
                 </div>
                 <div className="like-button-container">
                     <Link to='/Favorite'>

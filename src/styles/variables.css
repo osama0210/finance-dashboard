@@ -19,6 +19,8 @@
     --font-large: 16px;
     --font-xl: 20px;
     --font-xxl: 24px;
+    --font-xxxl: 2.4rem;
+    --coin-price-font-size: 2.4rem;
 
     /* Font Weights */
     --font-weight-normal: 400;
@@ -27,6 +29,7 @@
 
     /* Sizing */
     --logo-size: 1.8rem;
+    --coin-logo-size: 200px;
     --like-btn-size: 50px;
 
     /* Spacing */
