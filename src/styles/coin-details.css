@@ -1,3 +1,5 @@
+
+
 .coin-info-header {
     width: 100%;
     background-color: var(--primary-background-color);
@@ -40,7 +42,7 @@
 .coin-price-row {
     display: flex;
     align-items: center;
-    gap: var(--spacing-medium);
+    gap: var(--spacing-small);
     margin-top: var(--spacing-small);
 }
 
@@ -53,6 +55,7 @@
 .coin-change {
     font-size: var(--font-medium);
     font-weight: var(--font-weight-medium);
+    margin-top: 1.5rem;
 }
 
 .coin-change.positive {
@@ -94,4 +97,48 @@
         font-size: var(--font-small);
         margin-top: 0;
     }
+}
+
+/*--------------------- Coin Chart --------------------------------------*/
+
+.coin-chart-section {
+    margin-top: var(--spacing-xl);
+    background-color: var(--primary-background-color);
+    padding: var(--spacing-large) var(--spacing-xxl);
+    box-shadow: var(--card-box-shadow);
+    border-radius: var(--card-border-radius);
+    width: 100%;
+}
+
+.coin-chart-section h2 {
+    font-size: var(--font-xl);
+    margin-bottom: var(--spacing-medium);
+    color: var(--primary-text-color);
+}
+
+.chart-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.chart-controls button {
+    background-color: var(--secondary-background-color);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color var(--transition-speed) var(--transition-timing);
+}
+
+.chart-controls button:hover {
+    background-color: var(--active-text-color);
+    color: white;
+}
+
+.chart-btn.active {
+    background-color: var(--active-text-color);
+    color: white;
 }

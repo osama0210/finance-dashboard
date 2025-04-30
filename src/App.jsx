@@ -13,9 +13,9 @@ const App = () => {
     const [coins, setCoins] = useState([]);
 
     useEffect(() => {
-        fetch("https://data-api.coindesk.com/asset/v1/top/list?page=1&page_size=100")
+        fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd")
             .then(res => res.json())
-            .then(data => setCoins(data.Data.LIST));
+            .then(data => setCoins(data));
     }, []);
 
     return (
@@ -25,12 +25,11 @@ const App = () => {
                 <SupMenu/>
 
                 <Routes>
-                    <Route path="/" element={<CrircleChart />} />
                     <Route
-                        path="/Statistics"
+                        path="/"
                         element={<CoinsOverview favourite={favourite} setFavourite={setFavourite} />}
                     />
-                    <Route path={'/coin/:uri'} element={<CoinDetails coins={coins} />}></Route>
+                    <Route path={'/coin/:id'} element={<CoinDetails coins={coins} />}></Route>
                     <Route
                         path="/Favorite"
                         element={<Favorite favourite={favourite} />}

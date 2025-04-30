@@ -4,7 +4,6 @@ import {useNavigate} from "react-router-dom";
 
 const CoinsOverview = ({favourite, setFavourite}) => {
     // * Api link
-    const url = "https://data-api.coindesk.com/asset/v1/top/list?page=1&page_size=100";
     const [coins, setCoins] = useState(null);
     const [searchItem, setSearchItem] = useState('');
     const [filteredCoins, setFilteredCoins] = useState([]);
@@ -12,23 +11,26 @@ const CoinsOverview = ({favourite, setFavourite}) => {
 
     // * UseEffect to fetch the api.
     useEffect(() => {
-        fetch(url)
+        fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd")
             .then(res => {
                 return res.json();
             })
             .then(data => {
                 // Store the API data in the 'coins' state
-                setCoins(data.Data.LIST);
+                setCoins(data);
                 // Set all coins in the 'filteredCoins' state array
-                setFilteredCoins(data.Data.LIST);
+                setFilteredCoins(data);
             })
+            .catch(err => {
+                console.error("API fetch error:", err);
+            });
     }, [])
 
     // * UseEffect to filter based on search
     useEffect(() => {
         if (!coins) return
 
-        const filtered = coins.filter((coin) => coin.NAME.toLowerCase().includes(searchItem.toLowerCase()));
+        const filtered = coins.filter((coin) => coin.name.toLowerCase().includes(searchItem.toLowerCase()));
 
         setFilteredCoins(filtered);
     }, [searchItem, coins]);
@@ -82,18 +84,18 @@ const CoinsOverview = ({favourite, setFavourite}) => {
                 {
                     filteredCoins.map(coin => {
                         return (
-                            <tr key={coin.ID} className="table-body">
+                            <tr key={coin.id} className="table-body">
                                 <td
-                                    onClick={() => navigate(`/coin/${coin.URI}`)}
+                                    onClick={() => navigate(`/coin/${coin.id}`)}
                                     className="coin-name-img"
                                 >
-                                    <img className="coin-img" src={coin.LOGO_URL} alt=""/>
-                                    {coin.NAME}
+                                    <img className="coin-img" src={coin.image} alt={coin.name}/>
+                                    {coin.name}
                                 </td>
-                                <td>${parseFloat(coin.PRICE_USD).toFixed(5)}</td>
-                                <td>{parseFloat(coin.SPOT_MOVING_24_HOUR_CHANGE_PERCENTAGE_CONVERSION).toFixed(2)}%</td>
+                                <td>${parseFloat(coin.current_price).toFixed(5)}</td>
+                                <td>{parseFloat(coin.price_change_percentage_24h).toFixed(2)}%</td>
                                 <td>
-                                    <img onClick={() => addCoinFav(coin.NAME)} src={LinkIcon}
+                                    <img onClick={() => addCoinFav(coin.name)} src={LinkIcon}
                                          alt="Black star icon"/>
                                 </td>
                             </tr>
